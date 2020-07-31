@@ -1,0 +1,113 @@
+标准的输入输出
+标准输入：input
+Input(提示字符串)
+
+Python2.x:
+Input()函数：
+函数返回结果的类型由输入时使用的界定符决定
+>>>x=input(“ Please enter your input “)
+Please enter your input :5  //无界定符，此时为整数
+>>>x=input(“please enter your input”)
+Please enter your input :’5’ //有界定符‘’，此时为字符串类型
+>>>x=input(“please enter your input”)
+Please enter your input :[1,2,3] //有界定符[ ],此时为列表类型
+>>>x=input(“please enter your input”)
+Please enter your input :（1，2，3）//有界定符( ),此时为元祖类型
+
+raw_input()函数：
+将所有用户的输入都作为字符串看待，返回字符串类型
+>>>x=raw_input(“ Please enter your input “)
+Please enter your input :5
+>>>x
+‘5’
+>>>x=raw_input(“ Please enter your input “)
+Please enter your input (1,2,3)
+>>>x
+‘(1,2,3)’
+
+Pyton3.x
+仅保留input()函数，接收任意输入，将所有输入默认为字符串处理
+>>>x=input(“ Please enter your input: “)
+Please enter your input :5
+>>>print(type(x))
+<class’str’>
+>>>x=input(“ Please enter your input: “)
+Please enter your input :(1,2,3)
+>>>print(type(x))
+<class’str’>
+
+如要输入数值类型数据，可以使用类型转换函数将字符串转换为数值
+>>>x=int(input(“please input your input”)
+Please input your input:5
+>>>x
+5
+>>>printf(type(x))
+<class’int’>
+
+Input()可以进行多个变量赋值
+>>>x,y=eval(input())
+3,4
+>>>x
+3
+>>>y
+4
+
+eval()函数：
+eval(‘字符串‘)
+将字符串str当成有效表达式来求值并返回计算结果
+>>>x=5
+>>>eval(‘3*x’)
+15
+>>>eval(‘print(x)’)
+5
+
+
+标准输出
+Print()函数输出
+ Print([输出项1，输出项2,…,输出项n][,sep=分隔符][,end=结束符])
+>>>x,y=2,3
+>>>print(x,y)
+2,3
+>>>print(x,y,sep=’:’)
+2:3
+>>>print(x,y,sep=’:’,end=’%’)
+2:3%
+
+表达式进行输出：
+>>>str=”hello”
+>>>str
+‘hello’
+>>>2**4
+16
+
+格式化输出：
+1.	将输出项格式化，然后使用表达式的形式输出
+2.	将输出项格式化，然后使用print()函数输出
+
+字符串格式化%:
+常规字符：包括可显示的字符和用转义字符表示的字符
+格式控制符：决定所对应的输出和输出项的格式，以%开头的一个或多个字符。
+Print(“sum=%o”%123)
+Sum=为常规字符
+%o为格式控制符，表示将十进制整数以八进制输出
+
+常用格式说明符：
+d或i:十进制格式
+o：八进制格式
+x,X：十六进制格式
+c：一个字符的格式
+s：字符串格式
+f：实数格式
+e或E：指数格式
+g或G：e和f中较短一种格式
+
+格式化输出：
+>>>value=8.123
+>>>print(‘%6.2f’%value)  //表示以实数的形式输出，6位列宽，其中输出部分仅为4位，其中小数点也算一位，则前面要补两个空格，小数部分保留2位，
+[][]8.12
+>>>print(‘%06.2f’%value)  //6前面加了一个0，则表示当输出部分不足时，用0来补足
+008.12
+>>>print(‘%-04X%2d’%(10,100)) //前一个数表示占4位，X表示以16进制输出，-表示左对齐，0表示占位不足时用0补齐，
+
+
+
