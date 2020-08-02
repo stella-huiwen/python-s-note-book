@@ -1,0 +1,73 @@
+分支结构
+
+1.单分支结构
+if语句
+形式：  if 表达式：
+           语句
+
+a,b=eval(input("请输入两个数(a,b):)")
+max=a
+if b>max:
+  max=b
+print("max=%d"%max)
+
+
+2.双分支结构
+if/else
+形式：   if表达式：
+           语句1
+         else：
+           语句2
+           
+a,b=eval(input("请输入两个数(a,b):)")
+max=a
+if a>b:
+  max=a
+else:
+  max=b
+print("max=%d"%max)
+
+
+//随机数产生：
+random库提供了产生随机数的方法
+使用前应导入库：import random
+randint(a,b)=>返回一个a<=N<=b的随机整数N
+
+import random
+data=random.randint(1,5)
+guess=int(input("输入要猜的数字”））
+if guess=data:
+   print("yes")
+else:
+   print("no")
+   
+多分支结构：
+一般形式:       if  表达式1:
+                  语句1
+               elif  表达式2:
+                  语句2
+               elif  表达式3:
+                  语句3
+                  .
+                  .
+                  .
+               else:
+                  语句n
+                  
+                  
+                  
+if语句的嵌套（根据对齐关系来确定if之前的逻辑关系）
+1.嵌套只能在一个分支里嵌套，不能交叉
+2.多次if嵌套结构中，else语句不能单独使用，必须与if配对 //else一般与离得最近的且没有else配对的if对应
+
+<1>                         <2>
+if 表达式1：                  if 表达式1：
+    if 表达式2：                   if 表达式2：
+        语句1                           语句1
+else：                             else：
+    语句2                               语句2
+                             else：
+                                  if 表达式3：
+                                        语句3
+                                  else：
+                                        语句4
