@@ -31,7 +31,7 @@ print("max=%d"%max)
 //随机数产生：
 random库提供了产生随机数的方法
 使用前应导入库：import random
-randint(a,b)=>返回一个a<=N<=b的随机整数N
+randint(a,b)=>返回一个a<=N<=b的随机整数N 
 
 import random
 data=random.randint(1,5)
