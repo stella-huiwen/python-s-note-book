@@ -1,0 +1,39 @@
+for语句
+一般形式：  for  目标变量  in 序列对象:
+              循环体
+序列对象（列表，字符串，元组）
+
+
+for-else 语句 （当序列所以元素都被访问后，再执行else语句
+一般形式：  for  目标变量  in  序列对象:
+               语句块
+           else :
+               语句块
+             
+ range()语句
+ 一般形式：     range([start,]end[,step]) //start：起始点，end:终点，step:间距
+ >>> for i in range(5)://从1开始，到5之前                 >>> for i in range (2,4): //从2开始，到4之前     >>> for i in range(2,20,3)://从2开始，到20之前，间隔为3
+         print(i)                                                print(i)                                     print(i)
+ 1                                                       2                                             2
+ 2                                                       3                                             5
+ 3                                                                                                     8
+ 4                                                                                                     11
+                                                                                                       14
+                                                                                                       17
+ while()语句
+ 一般形式：   while 判断条件:
+               语句块
+ 
+ 
+ 
+ 应用：求1到200的和
+ sum=0                                  sum=0
+ i=1                                    for i in range(1,201):
+ while i<=200 :                          sum=sum+i
+      sum+=i
+      i=i+1                              print("sum=%d"%sum)
+ print("sum=%d"%sum)
+ 
+ 
+ 
+ 
